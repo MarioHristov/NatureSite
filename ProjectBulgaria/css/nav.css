@@ -1,0 +1,53 @@
+/*NAV BAR*/
+nav {
+    position: relative;
+    padding: 10px 0 20px 0;
+    /* box-shadow: 0px -3px 20px 20px rgba(106, 105, 105, 1); */
+    display: flex;
+    text-align: center;
+    height: calc(15px + 2.5vw);
+    z-index: 9999;
+    justify-content: space-around;
+    background-color: hsl(20, 5%, 90%);
+}
+nav .link-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav .link-container div.inactive {
+    visibility: hidden;
+    opacity: 0; /* Ensure it's hidden */
+    transform: translateX(80px); /* Keep it shifted when inactive */
+}
+
+nav .link-container div:not(.inactive) {
+    visibility: visible;
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Slide to its natural position */
+}
+/* border-right:2px solid rgba(255, 255, 255, 0.637); */
+
+nav .link-container div, nav #logo a{
+    visibility: visible;
+    font-size: 32px;
+    color: hsl(60, 5%, 40%);
+    text-decoration: none;
+    font-family: StoneFont;
+    width: fit-content;
+}
+nav .link-container div{
+    font-size: 22px;
+    color:hsl(40, 5%, 60%);
+    opacity: 0; /* Start hidden */
+    transform: translateX(80px); /* Start position to the left */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+}
+
+nav div:not(#logo) .link-img{
+    width: calc(30px + 1.2vw);
+    height: auto;
+    margin-left:20px;
+}

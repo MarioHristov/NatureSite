@@ -1,0 +1,20 @@
+/*FOOTER*/
+footer{
+    background-color: hsl(0, 5%, 90%);
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer-container h2{
+    color: hsl(0, 5%, 70%);
+}
+.footer-inner-container a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color:hsl(0, 5%, 50%);
+}
